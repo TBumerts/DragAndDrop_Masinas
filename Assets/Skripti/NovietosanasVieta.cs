@@ -36,7 +36,7 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
 					eventData.pointerDrag.GetComponent<RectTransform>().localRotation = GetComponent<RectTransform>().localRotation;
 					eventData.pointerDrag.GetComponent<RectTransform>().localScale = GetComponent<RectTransform>().localScale;
 					switch (eventData.pointerDrag.tag) {
-						case "atkritumi":
+						case "akritumi":
 							objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[1]);
 							break;
 						case "medicina":
@@ -52,7 +52,7 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
                 objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[0]);
                 switch (eventData.pointerDrag.tag)
                 {
-                    case "atkritumi":
+                    case "akritumi":
 						objektuSkripts.atkritumuMasina.GetComponent<RectTransform>().localPosition = objektuSkripts.atkrMKoord;
                         break;
                     case "medicina":
