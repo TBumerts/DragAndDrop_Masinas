@@ -16,10 +16,6 @@ public class Objekti : MonoBehaviour {
 	public GameObject Ekskavators;
 	public GameObject CementaM;
 	public GameObject PabeigsanasLogs;
-	public int punkti = 0;
-	public float laiks;
-    public bool laiksAktivs = true;
-	public Text laikaParadisana;
 
     [HideInInspector]
 	public Vector2 atkrMKoord;
@@ -48,10 +44,12 @@ public class Objekti : MonoBehaviour {
 	[HideInInspector]
 	public bool vaiIstajaVieta = false;
 	public GameObject pedejaisVilktais = null;
-
-
-	// Use this for initialization
-	void Start () {
+    public int punkti = 0;
+    public float laiks;
+    public bool laiksAktivs = true;
+    public Text laikaParadisana;
+    // Use this for initialization
+    void Start () {
 		polMKoord = policijasMasina.GetComponent<RectTransform>().localPosition;
 		e61MKoord = e61Masina.gameObject.GetComponent<RectTransform>().localPosition;
 		atkrMKoord = atkritumuMasina.GetComponent<RectTransform>().localPosition;
