@@ -7,6 +7,13 @@ public class Objekti : MonoBehaviour {
 	public GameObject atkritumuMasina;
 	public GameObject atraPalidzibaMasina;
 	public GameObject autobussaMasina;
+	public GameObject policijasMasina;
+	public GameObject e61Masina;
+	public GameObject e46Masina;
+	public GameObject traktors1M;
+	public GameObject traktors5M;
+	public GameObject Ekskavators;
+	public GameObject CementaM;
 
 	[HideInInspector]
 	public Vector2 atkrMKoord;
@@ -14,7 +21,21 @@ public class Objekti : MonoBehaviour {
 	public Vector2 atraPKoord;
 	[HideInInspector]
 	public Vector2 abuusMKoord;
-	public Canvas kanva;
+    [HideInInspector]
+    public Vector2 polMKoord;
+	[HideInInspector]
+	public Vector2 e61MKoord;
+    [HideInInspector]
+    public Vector2 e46MKoord;
+	[HideInInspector]
+	public Vector2 traktors1Koord;
+	[HideInInspector]
+	public Vector2 traktors5Koord;
+	[HideInInspector]
+	public Vector2 EkskavatorsKoord;
+	[HideInInspector]
+	public Vector2 CementaKoord;
+    public Canvas kanva;
 	public AudioSource audioAvots;
 	public AudioClip[] skanasKoAtskanot;
 
@@ -25,9 +46,15 @@ public class Objekti : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		polMKoord = policijasMasina.GetComponent<RectTransform>().localPosition;
+		e61MKoord = e61Masina.gameObject.GetComponent<RectTransform>().localPosition;
 		atkrMKoord = atkritumuMasina.GetComponent<RectTransform>().localPosition;
 		atraPKoord = atraPalidzibaMasina.GetComponent<RectTransform>().localPosition;
 		abuusMKoord = autobussaMasina.GetComponent<RectTransform>().localPosition;
+		e46MKoord = e46Masina.GetComponent <RectTransform>().localPosition;
+		traktors1Koord = traktors1M.GetComponent<RectTransform>().localPosition;
+		traktors5Koord = traktors5M.GetComponent<RectTransform>().localPosition;
+		EkskavatorsKoord = Ekskavators.GetComponent<RectTransform>().localPosition;
 	}
 	
 }
