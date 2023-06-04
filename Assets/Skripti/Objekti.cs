@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Objekti : MonoBehaviour {
 	public GameObject atkritumuMasina;
@@ -14,8 +15,11 @@ public class Objekti : MonoBehaviour {
 	public GameObject traktors5M;
 	public GameObject Ekskavators;
 	public GameObject CementaM;
+	public GameObject PabeigsanasLogs;
+	public int punkti = 0;
 	public float laiks;
     public bool laiksAktivs = true;
+	public Text laikaParadisana;
 
     [HideInInspector]
 	public Vector2 atkrMKoord;
@@ -57,6 +61,8 @@ public class Objekti : MonoBehaviour {
 		traktors1Koord = traktors1M.GetComponent<RectTransform>().localPosition;
 		traktors5Koord = traktors5M.GetComponent<RectTransform>().localPosition;
 		EkskavatorsKoord = Ekskavators.GetComponent<RectTransform>().localPosition;
+		PabeigsanasLogs.SetActive (false);
+		laikaParadisana.GetComponent<Text>().enabled = false;
 	}
 	
 }
