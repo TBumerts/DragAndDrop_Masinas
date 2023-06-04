@@ -14,8 +14,10 @@ public class Objekti : MonoBehaviour {
 	public GameObject traktors5M;
 	public GameObject Ekskavators;
 	public GameObject CementaM;
+	public float laiks;
+    public bool laiksAktivs = true;
 
-	[HideInInspector]
+    [HideInInspector]
 	public Vector2 atkrMKoord;
     [HideInInspector]
 	public Vector2 atraPKoord;

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ParslegtAinas : MonoBehaviour {
+    public float laiks;
     public void UzSakumu()
     {
         SceneManager.LoadScene("Starta", LoadSceneMode.Single);

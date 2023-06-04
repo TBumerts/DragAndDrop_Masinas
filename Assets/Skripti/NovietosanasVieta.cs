@@ -8,6 +8,7 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
 	private Vector2 vietasIzm, velkObjIzm;
 	private float xIzmeruStarp, yIzmeruStarp;
 	public Objekti objektuSkripts;
+	
 	// Use this for initialization
 	void Start () {
 		
@@ -15,8 +16,8 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+     
+    }
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -46,13 +47,13 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
                             objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
 							break;
 						case "e61":
-                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[4]);
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
                             break;
 						case "policija":
-                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[5]);
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
                             break;
 						case "e46":
-                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[6]);
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
                             break;
 					}
 				}
@@ -63,6 +64,7 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
                 {
                     case "akritumi":
 						objektuSkripts.atkritumuMasina.GetComponent<RectTransform>().localPosition = objektuSkripts.atkrMKoord;
+				
                         break;
                     case "medicina":
                         objektuSkripts.atraPalidzibaMasina.GetComponent<RectTransform>().localPosition = objektuSkripts.atraPKoord;
@@ -92,7 +94,7 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
                         objektuSkripts.CementaM.GetComponent<RectTransform>().localPosition = objektuSkripts.CementaKoord;
                         break;
                 }
+                }
             }
 		}
     }
-}
