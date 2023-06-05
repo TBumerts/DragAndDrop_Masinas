@@ -16,6 +16,7 @@ public class Objekti : MonoBehaviour {
 	public GameObject Ekskavators;
 	public GameObject CementaM;
 	public GameObject PabeigsanasLogs;
+	public GameObject UgunsM;
 
     [HideInInspector]
 	public Vector2 atkrMKoord;
@@ -37,6 +38,8 @@ public class Objekti : MonoBehaviour {
 	public Vector2 EkskavatorsKoord;
 	[HideInInspector]
 	public Vector2 CementaKoord;
+	[HideInInspector]
+	public Vector2 UgunsKoord;
     public Canvas kanva;
 	public AudioSource audioAvots;
 	public AudioClip[] skanasKoAtskanot;
@@ -58,6 +61,7 @@ public class Objekti : MonoBehaviour {
 		e46MKoord = e46Masina.GetComponent <RectTransform>().localPosition;
 		traktors1Koord = traktors1M.GetComponent<RectTransform>().localPosition;
 		traktors5Koord = traktors5M.GetComponent<RectTransform>().localPosition;
+		UgunsKoord = UgunsM.GetComponent<RectTransform>().localPosition;
 		EkskavatorsKoord = Ekskavators.GetComponent<RectTransform>().localPosition;
 		PabeigsanasLogs.SetActive (false);
 		laikaParadisana.GetComponent<Text>().enabled = false;

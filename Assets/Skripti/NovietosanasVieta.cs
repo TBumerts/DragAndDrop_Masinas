@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class NovietosanasVieta : MonoBehaviour, IDropHandler {
 	private float vietasZRot, velkObjZRot, rotacijasStarpiba;
@@ -50,31 +51,35 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
                             objektuSkripts.punkti++;
                             break;
 						case "e61":
-                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[4]);
                             objektuSkripts.punkti++;
                             break;
 						case "policija":
-                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[5]);
                             objektuSkripts.punkti++;
                             break;
 						case "e46":
-                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[6]);
                             objektuSkripts.punkti++;
                             break;
                         case "traktors1":
-                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[7]);
                             objektuSkripts.punkti++;
                             break;
                         case "traktors5":
-                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[8]);
                             objektuSkripts.punkti++;
                             break;
                         case "eskavators":
-                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[9]);
                             objektuSkripts.punkti++;
                             break;
                         case "cementa":
-                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[10]);
+                            objektuSkripts.punkti++;
+                            break;
+                        case "uguns":
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[11]);
                             objektuSkripts.punkti++;
                             break;
                     }
@@ -85,7 +90,7 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
                 switch (eventData.pointerDrag.tag)
                 {
                     case "akritumi":
-						objektuSkripts.atkritumuMasina.GetComponent<RectTransform>().localPosition = objektuSkripts.atkrMKoord;
+                        objektuSkripts.atkritumuMasina.GetComponent<RectTransform>().localPosition = objektuSkripts.atkrMKoord;
                         break;
                     case "medicina":
                         objektuSkripts.atraPalidzibaMasina.GetComponent<RectTransform>().localPosition = objektuSkripts.atraPKoord;
@@ -102,27 +107,31 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
                     case "e46":
                         objektuSkripts.e46Masina.GetComponent<RectTransform>().localPosition = objektuSkripts.e46MKoord;
                         break;
-					case "traktors1":
+                    case "traktors1":
                         objektuSkripts.traktors1M.GetComponent<RectTransform>().localPosition = objektuSkripts.traktors1Koord;
                         break;
-					case "traktors5":
+                    case "traktors5":
                         objektuSkripts.traktors5M.GetComponent<RectTransform>().localPosition = objektuSkripts.traktors5Koord;
                         break;
-					case "eskavators":
+                    case "eskavators":
                         objektuSkripts.Ekskavators.GetComponent<RectTransform>().localPosition = objektuSkripts.EkskavatorsKoord;
-                        
+
                         break;
-					case "cementa":
+                    case "cementa":
                         objektuSkripts.CementaM.GetComponent<RectTransform>().localPosition = objektuSkripts.CementaKoord;
-            
+                        break;
+                    case "uguns":
+                        objektuSkripts.UgunsM.GetComponent<RectTransform>().localPosition = objektuSkripts.UgunsKoord;
                         break;
                 }
-                if (objektuSkripts.punkti == 10)
-                {
-                    objektuSkripts.PabeigsanasLogs.SetActive(true);
-                    objektuSkripts.laiksAktivs = false;
                 }
             }
+            if (objektuSkripts.punkti == 11)
+            {
+                objektuSkripts.PabeigsanasLogs.SetActive(true);
+                objektuSkripts.laiksAktivs = false;
+                objektuSkripts.laikaParadisana.GetComponent<Text>().enabled = true;
+                objektuSkripts.laikaParadisana.text = "Spēle pabeigta " + Mathf.Round(objektuSkripts.laiks).ToString() + " sekundes!";
             }
+        }
 		}
-    }
