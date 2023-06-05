@@ -126,8 +126,8 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
                 }
                 }
             }
-            if (objektuSkripts.punkti == 11)
-            {
+        if (objektuSkripts.punkti == 11)
+        {
                 objektuSkripts.PabeigsanasLogs.SetActive(true);
                 objektuSkripts.laiksAktivs = false;
                 objektuSkripts.laikaParadisana.GetComponent<Text>().enabled = true;
