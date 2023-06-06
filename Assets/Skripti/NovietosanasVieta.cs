@@ -12,6 +12,7 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
 	
 	// Use this for initialization
 	void Start () {
+        //sakotneji izsledz visas zvaigznes iesakot programmas darbibu
         objektuSkripts.zvaigzne1.SetActive(false);
         objektuSkripts.zvaigzne2.SetActive(false);
         objektuSkripts.zvaigzne3.SetActive(false);
@@ -19,6 +20,7 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
 	
 	// Update is called once per frame
 	void Update () {
+        //izmanto if lai parbauditu sekunzu skaitu ieseldzot un izsledzot vajadzigo zvaigznu skaitu
         if (objektuSkripts.laiks <= 80)
         {
             objektuSkripts.zvaigzne1.SetActive(true);
@@ -58,6 +60,7 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
                     eventData.pointerDrag.GetComponent<RectTransform>().localRotation = GetComponent<RectTransform>().localRotation;
                     eventData.pointerDrag.GetComponent<RectTransform>().localScale = GetComponent<RectTransform>().localScale;
                     switch (eventData.pointerDrag.tag) {
+                        //atskanojot audio effektiem tiek ari pievienoti punkti pie kopeja punktu skaita
                         case "akritumi":
                             objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[1]);
                             objektuSkripts.punkti++;
@@ -146,11 +149,14 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
                 }
             }
         }
+        //parbauda vai punktu skaits ir vienads ar masinu skaitu
         if (objektuSkripts.punkti == 11)
         {
+            //parada pabeigsanas logu un izsledz laika atskaiti
             objektuSkripts.PabeigsanasLogs.SetActive(true);
             objektuSkripts.laiksAktivs = false;
             objektuSkripts.laikaParadisana.GetComponent<Text>().enabled = true;
+            //izvada laiku sakotneji to ar mathf noapalojot lietotajam saprotamas vertibas
             objektuSkripts.laikaParadisana.text = "Spēle pabeigta " + Mathf.Round(objektuSkripts.laiks).ToString() + " sekundes!";
         }
         }

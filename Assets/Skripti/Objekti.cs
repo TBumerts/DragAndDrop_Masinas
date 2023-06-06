@@ -49,9 +49,13 @@ public class Objekti : MonoBehaviour {
 	[HideInInspector]
 	public bool vaiIstajaVieta = false;
 	public GameObject pedejaisVilktais = null;
+	//pievieno punktu mainigo kura atradisies punktu skaits
     public int punkti = 0;
+	//pievieno laika mainigo
     public float laiks;
+	//pievieno mainigo kurs noteiks vai laiks tiek skaitits vai ne
     public bool laiksAktivs = true;
+	// Pievieno Text kura atradisies laiks
     public Text laikaParadisana;
     // Use this for initialization
     void Start () {
@@ -65,7 +69,9 @@ public class Objekti : MonoBehaviour {
 		traktors5Koord = traktors5M.GetComponent<RectTransform>().localPosition;
 		UgunsKoord = UgunsM.GetComponent<RectTransform>().localPosition;
 		EkskavatorsKoord = Ekskavators.GetComponent<RectTransform>().localPosition;
+		// izsledz pabeigsanas logu sakuma lai lietotajam tas nebutu redzams
 		PabeigsanasLogs.SetActive (false);
+		// izsledz ari laika teksta lodzinu lai sakotneji laiks netiktu radits
 		laikaParadisana.GetComponent<Text>().enabled = false;
 	}
 	

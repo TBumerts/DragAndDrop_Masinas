@@ -8,7 +8,6 @@ public class ParslegtAinas : MonoBehaviour {
     {
         SceneManager.LoadScene("Starta", LoadSceneMode.Single);
     }
-    //Pašiem jāuztaisa metode,kas pārslēdzno sākuma uz UI ainu
     public void uzUI()
     {
         SceneManager.LoadScene("PilsetasAina", LoadSceneMode.Single);
