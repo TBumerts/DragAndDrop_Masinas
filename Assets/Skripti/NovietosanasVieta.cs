@@ -12,53 +12,74 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
 	
 	// Use this for initialization
 	void Start () {
-		
-	} 
+        objektuSkripts.zvaigzne1.SetActive(false);
+        objektuSkripts.zvaigzne2.SetActive(false);
+        objektuSkripts.zvaigzne3.SetActive(false);
+        objektuSkripts.restartaPoga.SetActive(false);
+    } 
 	
 	// Update is called once per frame
 	void Update () {
-     
+        if (objektuSkripts.laiks <= 80)
+        {
+            objektuSkripts.zvaigzne1.SetActive(true);
+            objektuSkripts.zvaigzne2.SetActive(true);
+            objektuSkripts.zvaigzne3.SetActive(true);
+        }
+        else if (objektuSkripts.laiks > 80 && objektuSkripts.laiks <= 110)
+        {
+            objektuSkripts.zvaigzne1.SetActive(true);
+            objektuSkripts.zvaigzne2.SetActive(true);
+            objektuSkripts.zvaigzne3.SetActive(false);
+        }
+        else if (objektuSkripts.laiks > 110)
+        {
+            objektuSkripts.zvaigzne1.SetActive(true);
+            objektuSkripts.zvaigzne2.SetActive(false);
+            objektuSkripts.zvaigzne3.SetActive(false);
+        }
+
     }
 
     public void OnDrop(PointerEventData eventData)
     {
-		if (eventData.pointerDrag != null) {
-			if (eventData.pointerDrag.tag.Equals(tag)) { 
-				vietasZRot = GetComponent<RectTransform>().transform.eulerAngles.z;
-				velkObjZRot = eventData.pointerDrag.GetComponent<RectTransform>().transform.eulerAngles.z;
-				rotacijasStarpiba = Mathf.Abs(velkObjZRot- vietasZRot);
-				velkObjIzm = eventData.pointerDrag.GetComponent<RectTransform>().localScale;
-				vietasIzm = GetComponent<RectTransform>().localScale;
-				xIzmeruStarp = Mathf.Abs(velkObjIzm.x - vietasIzm.x);
-				yIzmeruStarp = Mathf.Abs(velkObjIzm.y - vietasIzm.y);
-				if ((rotacijasStarpiba <= 6 || (rotacijasStarpiba>=354 && rotacijasStarpiba<=360))&& (xIzmeruStarp<= 0.1&&yIzmeruStarp <=0.1)){
+        if (eventData.pointerDrag != null) {
+            if (eventData.pointerDrag.tag.Equals(tag)) {
+                vietasZRot = GetComponent<RectTransform>().transform.eulerAngles.z;
+                velkObjZRot = eventData.pointerDrag.GetComponent<RectTransform>().transform.eulerAngles.z;
+                rotacijasStarpiba = Mathf.Abs(velkObjZRot - vietasZRot);
+                velkObjIzm = eventData.pointerDrag.GetComponent<RectTransform>().localScale;
+                vietasIzm = GetComponent<RectTransform>().localScale;
+                xIzmeruStarp = Mathf.Abs(velkObjIzm.x - vietasIzm.x);
+                yIzmeruStarp = Mathf.Abs(velkObjIzm.y - vietasIzm.y);
+                if ((rotacijasStarpiba <= 6 || (rotacijasStarpiba >= 354 && rotacijasStarpiba <= 360)) && (xIzmeruStarp <= 0.1 && yIzmeruStarp <= 0.1)) {
 
-					objektuSkripts.vaiIstajaVieta = true;
-					eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-					eventData.pointerDrag.GetComponent<RectTransform>().localRotation = GetComponent<RectTransform>().localRotation;
-					eventData.pointerDrag.GetComponent<RectTransform>().localScale = GetComponent<RectTransform>().localScale;
-					switch (eventData.pointerDrag.tag) {
-						case "akritumi":
-							objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[1]);
+                    objektuSkripts.vaiIstajaVieta = true;
+                    eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                    eventData.pointerDrag.GetComponent<RectTransform>().localRotation = GetComponent<RectTransform>().localRotation;
+                    eventData.pointerDrag.GetComponent<RectTransform>().localScale = GetComponent<RectTransform>().localScale;
+                    switch (eventData.pointerDrag.tag) {
+                        case "akritumi":
+                            objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[1]);
                             objektuSkripts.punkti++;
-							break;
-						case "medicina":
+                            break;
+                        case "medicina":
                             objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[2]);
                             objektuSkripts.punkti++;
                             break;
-						case "buss":
+                        case "buss":
                             objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[3]);
                             objektuSkripts.punkti++;
                             break;
-						case "e61":
+                        case "e61":
                             objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[4]);
                             objektuSkripts.punkti++;
                             break;
-						case "policija":
+                        case "policija":
                             objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[5]);
                             objektuSkripts.punkti++;
                             break;
-						case "e46":
+                        case "e46":
                             objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[6]);
                             objektuSkripts.punkti++;
                             break;
@@ -83,9 +104,9 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
                             objektuSkripts.punkti++;
                             break;
                     }
-				}
-			}else{
-				objektuSkripts.vaiIstajaVieta = false;
+                }
+            } else {
+                objektuSkripts.vaiIstajaVieta = false;
                 objektuSkripts.audioAvots.PlayOneShot(objektuSkripts.skanasKoAtskanot[0]);
                 switch (eventData.pointerDrag.tag)
                 {
@@ -124,14 +145,15 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
                         objektuSkripts.UgunsM.GetComponent<RectTransform>().localPosition = objektuSkripts.UgunsKoord;
                         break;
                 }
-                }
-            }
-        if (objektuSkripts.punkti == 11)
-        {
-                objektuSkripts.PabeigsanasLogs.SetActive(true);
-                objektuSkripts.laiksAktivs = false;
-                objektuSkripts.laikaParadisana.GetComponent<Text>().enabled = true;
-                objektuSkripts.laikaParadisana.text = "Spēle pabeigta " + Mathf.Round(objektuSkripts.laiks).ToString() + " sekundes!";
             }
         }
-		}
+        if (objektuSkripts.punkti == 11)
+        {
+            objektuSkripts.PabeigsanasLogs.SetActive(true);
+            objektuSkripts.laiksAktivs = false;
+            objektuSkripts.laikaParadisana.GetComponent<Text>().enabled = true;
+            objektuSkripts.laikaParadisana.text = "Spēle pabeigta " + Mathf.Round(objektuSkripts.laiks).ToString() + " sekundes!";
+            objektuSkripts.restartaPoga.SetActive(true);
+        }
+        }
+        }

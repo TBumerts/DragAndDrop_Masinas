@@ -17,6 +17,10 @@ public class Objekti : MonoBehaviour {
 	public GameObject CementaM;
 	public GameObject PabeigsanasLogs;
 	public GameObject UgunsM;
+	public GameObject zvaigzne1;
+	public GameObject zvaigzne2;
+	public GameObject zvaigzne3;
+	public GameObject restartaPoga;
 
     [HideInInspector]
 	public Vector2 atkrMKoord;
