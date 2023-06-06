@@ -15,7 +15,6 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
         objektuSkripts.zvaigzne1.SetActive(false);
         objektuSkripts.zvaigzne2.SetActive(false);
         objektuSkripts.zvaigzne3.SetActive(false);
-        objektuSkripts.restartaPoga.SetActive(false);
     } 
 	
 	// Update is called once per frame
@@ -153,7 +152,6 @@ public class NovietosanasVieta : MonoBehaviour, IDropHandler {
             objektuSkripts.laiksAktivs = false;
             objektuSkripts.laikaParadisana.GetComponent<Text>().enabled = true;
             objektuSkripts.laikaParadisana.text = "Spēle pabeigta " + Mathf.Round(objektuSkripts.laiks).ToString() + " sekundes!";
-            objektuSkripts.restartaPoga.SetActive(true);
         }
         }
         }

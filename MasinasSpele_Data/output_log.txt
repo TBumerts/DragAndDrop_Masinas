@@ -1,0 +1,62 @@
+Initialize engine version: 5.5.6f1 (3fb31a95adee)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics 630 (ID=0x9bc8)
+    Vendor:   Intel
+    VRAM:     4183 MB
+    Driver:   30.0.101.1273
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\2PT-2\Desktop\DragAndDrop_Masinas\MasinasSpele_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\2PT-2\Desktop\DragAndDrop_Masinas\MasinasSpele_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\2PT-2\Desktop\DragAndDrop_Masinas\MasinasSpele_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\2PT-2\Desktop\DragAndDrop_Masinas\MasinasSpele_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\2PT-2\Desktop\DragAndDrop_Masinas\MasinasSpele_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\2PT-2\Desktop\DragAndDrop_Masinas\MasinasSpele_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\2PT-2\Desktop\DragAndDrop_Masinas\MasinasSpele_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\2PT-2\Desktop\DragAndDrop_Masinas\MasinasSpele_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\2PT-2\Desktop\DragAndDrop_Masinas\MasinasSpele_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\2PT-2\Desktop\DragAndDrop_Masinas\MasinasSpele_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.327 seconds
+Platform assembly: C:\Users\2PT-2\Desktop\DragAndDrop_Masinas\MasinasSpele_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\2PT-2\Desktop\DragAndDrop_Masinas\MasinasSpele_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.446400 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.124700 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 485.
+Total: 0.196900 ms (FindLiveObjects: 0.013700 ms CreateObjectMapping: 0.007300 ms MarkObjects: 0.156300 ms  DeleteObjects: 0.016900 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.649300 ms
+
+Unloading 64 unused Assets to reduce memory usage. Loaded Objects now: 285.
+Total: 5.735500 ms (FindLiveObjects: 0.017900 ms CreateObjectMapping: 0.011300 ms MarkObjects: 0.165600 ms  DeleteObjects: 5.540200 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.209900 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 485.
+Total: 0.174100 ms (FindLiveObjects: 0.012600 ms CreateObjectMapping: 0.007400 ms MarkObjects: 0.148200 ms  DeleteObjects: 0.005600 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.544300 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 485.
+Total: 0.355500 ms (FindLiveObjects: 0.061700 ms CreateObjectMapping: 0.011700 ms MarkObjects: 0.275500 ms  DeleteObjects: 0.005800 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.365200 ms
+
+Unloading 64 unused Assets to reduce memory usage. Loaded Objects now: 285.
+Total: 3.760600 ms (FindLiveObjects: 0.012900 ms CreateObjectMapping: 0.009000 ms MarkObjects: 0.131600 ms  DeleteObjects: 3.606800 ms)
+
+Setting up 3 worker threads for Enlighten.
+  Thread -> id: 1c4c -> priority: 1 
+  Thread -> id: 1af4 -> priority: 1 
+  Thread -> id: 2c24 -> priority: 1 

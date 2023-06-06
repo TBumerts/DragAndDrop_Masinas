@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +19,6 @@ public class Objekti : MonoBehaviour {
 	public GameObject zvaigzne1;
 	public GameObject zvaigzne2;
 	public GameObject zvaigzne3;
-	public GameObject restartaPoga;
 
     [HideInInspector]
 	public Vector2 atkrMKoord;
